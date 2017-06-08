@@ -27,7 +27,12 @@ public class GroovyResourceLoadingTest {
     final CompilerConfiguration compilerConfiguration = new CompilerConfiguration(compilerProperties);
 
     final GroovyShell groovyShell = new GroovyShell(Thread.currentThread().getContextClassLoader(), new Binding(), compilerConfiguration);
-    groovyShell.evaluate(scriptFile);
+    try {
+      groovyShell.evaluate(scriptFile);
+    }catch(AssertionError ae){
+      ae.printStackTrace();
+      throw ae;
+    }
   }
 
   @Test
@@ -41,6 +46,11 @@ public class GroovyResourceLoadingTest {
     final CompilerConfiguration compilerConfiguration = new CompilerConfiguration(compilerProperties);
 
     final GroovyShell groovyShell = new GroovyShell(Thread.currentThread().getContextClassLoader(), new Binding(), compilerConfiguration);
-    groovyShell.evaluate(scriptFile);
+    try {
+      groovyShell.evaluate(scriptFile);
+    }catch(AssertionError ae){
+      ae.printStackTrace();
+      throw ae;
+    }
   }
 }
