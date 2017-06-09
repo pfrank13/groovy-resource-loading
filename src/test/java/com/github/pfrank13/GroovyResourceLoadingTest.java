@@ -5,6 +5,7 @@ import groovy.lang.GroovyShell;
 
 import org.assertj.core.api.Assertions;
 import org.codehaus.groovy.control.CompilerConfiguration;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;

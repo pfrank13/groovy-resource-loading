@@ -2,7 +2,7 @@ package scripts
 
 import org.assertj.core.api.Assertions
 
-final InputStream is = this.getClass().getResourceAsStream('config.properties')
+final InputStream is = this.getClass().getResourceAsStream('/config.properties')
 
 Assertions.assertThat(is).isNotNull() //This will fail
 
